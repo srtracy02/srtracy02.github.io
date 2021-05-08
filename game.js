@@ -12,6 +12,20 @@ const board = () => {
     ctx.stroke()
 }
 
+class Player {
+    constructor(y) {
+        this.y = y
+    }
+    
+    draw = () => {
+        ctx.beginPath()
+        ctx.fillRect(w*.03, this.y - (h*.06), w*.01, h*.12)
+        
+    }
+}
+
+const player = new Player(h/2)
+
 function animate() {
     board()
     requestAnimationFrame(animate)
