@@ -14,7 +14,7 @@ const board = () => {
     ctx.moveTo(w/3, 0)
     ctx.rect(w/3, h-h/20 , w/3, h)
     ctx.font = '48px Tahoma';
-    ctx.fontColor
+    ctx.fillStyle = "black"
     ctx.fillText(computer.score, w/15, h/15)
     ctx.fillText(player.score, w/15, h - h/16)
     ctx.stroke()
