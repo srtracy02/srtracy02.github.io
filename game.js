@@ -3,7 +3,7 @@ const w = canvas.width = 500
 const h = canvas.height = 700
 document.body.appendChild(canvas)
 const ctx = canvas.getContext('2d')
-var color = #ff9aa2
+var c = "#ff9aa2"
 
 const board = () => {
     ctx.beginPath()
@@ -30,10 +30,10 @@ window.addEventListener('mousemove', (e) => {
 document.addEventListener('keydown', function (e) {
     if (e.key === '1') { //light mode
         document.body.style = "color: #ff9aa2; background-color: #ffdac1";
-        color = #ff9aa2;
+        c = #ff9aa2;
     }if (e.key === '2') { //dark mode
         document.body.style = "color: #e0bbe4; background-color: #564863";
-        color = #e0bbe4;
+        c = #e0bbe4;
     }
 })
         
