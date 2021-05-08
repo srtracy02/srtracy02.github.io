@@ -27,7 +27,7 @@ class Player {
         this.dy = undefined
     }
     
-    draw () {
+    draw() {
         ctx.beginPath()
         ctx.arc(this.x, this.y, w*.05, 0, 2*Math.PI)
         ctx.fillStyle = "red"
@@ -40,6 +40,35 @@ class Player {
         this.dy = this.y - this.prevY
         this.prevX = this.x
         this.prevY = this.y
+    }
+}
+
+class Puck {
+    constructor() {
+        this.x = w/2
+        this.y = h/2
+        this.dx = 5
+        this.dy = 5
+    }
+    
+    draw() {
+        ctx.beginPath()
+        ctx.arc(this.x, this.y, w*.04, 0, 2*Math.PI)
+        ctx.fillStyle = "black"
+        ctx.fill()
+        ctx.stroke()
+    }
+    
+    update() {
+        this.x += this.dx
+        this.y += this.dy
+        if (this.x + w*.04 > w || this.x - w*.04 < 0) {
+            this.dx *= -1
+        }
+        
+        if (this.y + w*.04 > h || this.y - w*.04 < 0) {
+            this.dy *= -1
+        }
     }
 }
 
