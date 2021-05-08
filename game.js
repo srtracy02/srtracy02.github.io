@@ -29,7 +29,7 @@ document.addEventListener('keydown', function (e) {
     if (e.key === '2') {
         document.body.style = "color: white; background-color: #111111";
     }
-}
+})
         
 
 class Player {
