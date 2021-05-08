@@ -25,18 +25,6 @@ window.addEventListener('mousemove', (e) => {
     player.y = e.y - h*.05
 })
 
-window.addEventListener('keypress', (e) => {
-    if (e.keyCode === 49) { //light mode
-    }
-    if (e.keyCode === 50) { //dark mode
-        document.body.style.backgroundColor = rgb(69, 69, 69);
-    }
-    if (e.keyCode === 51) { //pastel mode
-    }
-    if (e.keyCode === 52 { //sports mode
-    }
-})
-
 class Player {
     constructor() {
         this.x = undefined
