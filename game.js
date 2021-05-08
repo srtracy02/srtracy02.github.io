@@ -21,6 +21,10 @@ class Player {
     constructor () {
         this.x = undefined
         this.y = undefined
+        this.prevX = undefined
+        this.prevY = undefined
+        this.dx = undefined
+        this.dy = undefined
     }
     
     draw () {
@@ -29,6 +33,13 @@ class Player {
         ctx.fillStyle = "red"
         ctx.fill()
         ctx.stroke()
+    }
+    
+    update() {
+        this.dx = this.x - this.prevX
+        this.dy = this.y - this.prevY
+        this.prevX = this.x
+        this.prevY = this.y
     }
 }
 
