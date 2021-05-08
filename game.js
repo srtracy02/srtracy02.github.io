@@ -27,9 +27,9 @@ window.addEventListener('mousemove', (e) => {
 
 document.addEventListener('keydown', function (e) {
     if (e.key === '1') { //light mode
-        document.body.style = "color: "#ff9aa2"; background-color: "#ffdac1";
+        document.body.style = color: "#ff9aa2"; background-color: "#ffdac1";
     }if (e.key === '2') { //dark mode
-        document.body.style = "color: "#e0bbe4"; background-color: "#564863";
+        document.body.style = color: "#e0bbe4"; background-color: "#564863";
     }
 })
         
