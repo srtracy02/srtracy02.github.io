@@ -12,8 +12,35 @@ const board = () => {
     ctx.stroke()
 }
 
+window.addEventListener('mousemove', (e) => {
+    player.x = e.x - window.innerWidth/2 + w/2
+    player.y = e.y - h*.05
+})
+
+class Player {
+    constructor () {
+        this.x = undefined
+        this.y = undefined
+    }
+    
+    draw () {
+        ctx.beginPath()
+        ctx.arc(this.x, this.y, w*.05, 0, 2*Math.PI)
+        ctx.fillStyle = "red"
+        ctx.fill()
+        ctx.stroke()
+    }
+}
+
+const player = new Player
+
 function animate() {
+    ctx.clearRect(0, 0, w, h)
+    
     board()
+    
+    player.draw()
+    
     requestAnimationFrame(animate)
 }
 
