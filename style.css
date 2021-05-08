@@ -1,3 +1,4 @@
+<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +18,7 @@ canvas {
 }
 
 body {
-    font-family: 'OCR A Std', monospace;
+    font-family: 'Aldrich', monospace;
 }
 
 a {
