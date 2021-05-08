@@ -9,10 +9,14 @@ const board = () => {
     if (darkMode === false) {
         ctx.fillStyle = "#ffeadb";
     } else if (darkMode === true) {
-        ctx.fillStyle = "#5c5661";
+        ctx.fillStyle = "#594f61";
     }
     ctx.fillRect(0, 0, w, h);
-    ctx.fillStyle = "#E3C2B1";
+    if (darkMode === false) {
+        ctx.fillStyle = "#ff9aa2";
+    } else if (darkMode === true) {
+        ctx.fillStyle = "#e0bbe4"
+    }
     ctx.beginPath()
     ctx.arc(w/2,h/2,w/10,0,2*Math.PI)
     ctx.moveTo(0,h/2)
