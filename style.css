@@ -1,4 +1,3 @@
-<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,7 @@ canvas {
 }
 
 body {
-    font-family: 'Aldrich', monospace;
+    font-family: 'Courier', monospace;
 }
 
 a {
