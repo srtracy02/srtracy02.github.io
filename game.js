@@ -3,6 +3,7 @@ const w = canvas.width = 500
 const h = canvas.height = 700
 document.body.appendChild(canvas)
 const ctx = canvas.getContext('2d')
+var color = #ff9aa2
 
 const board = () => {
     ctx.beginPath()
@@ -14,9 +15,9 @@ const board = () => {
     ctx.moveTo(w/3, 0)
     ctx.rect(w/3, h-h/20 , w/3, h)
     ctx.font = '48px Tahoma';
-    ctx.fillStyle = "#4b81ab"
-    ctx.fillText(computer.score, w/15, h/15)
     ctx.fillStyle = "#b28dff"
+    ctx.fillText(computer.score, w/15, h/15)
+    ctx.fillStyle = "#4b81ab"
     ctx.fillText(player.score, w/15, h - h/16)
     ctx.stroke()
 }
@@ -29,8 +30,10 @@ window.addEventListener('mousemove', (e) => {
 document.addEventListener('keydown', function (e) {
     if (e.key === '1') { //light mode
         document.body.style = "color: #ff9aa2; background-color: #ffdac1";
+        color = #ff9aa2;
     }if (e.key === '2') { //dark mode
         document.body.style = "color: #e0bbe4; background-color: #564863";
+        color = #e0bbe4;
     }
 })
         
