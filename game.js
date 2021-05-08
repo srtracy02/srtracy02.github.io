@@ -27,7 +27,7 @@ window.addEventListener('mousemove', (e) => {
 
 document.addEventListener('keydown', function (e) {
     if (e.key === '2') {
-        document.body.classList.toggle("dark-mode");
+        document.body.style = "color: white; background-color: #111111";
     }
 }
         
