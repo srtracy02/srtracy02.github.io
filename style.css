@@ -7,7 +7,14 @@ body {
     display: flex;
     justify-content: center;
     background-color: hsl(0, 100%, 100%);
+    color: "black"
 }
+
+.dark-mode {
+    display: flex;
+    justify-content: center;
+    background-color: "black";
+    color: "white";
 
 canvas {
     background-color: hsl(0,100%,100%);
@@ -23,7 +30,6 @@ body {
 a {
     font-size: 24px;
     font-family: 'Tahoma', monospace;
-    text-color: "black";
 }
 
 #text {
