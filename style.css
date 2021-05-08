@@ -15,6 +15,7 @@ body {
     justify-content: center;
     background-color: "black";
     color: "white";
+}
 
 canvas {
     background-color: hsl(0,100%,100%);
