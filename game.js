@@ -41,6 +41,7 @@ class Player {
         this.prevX = this.x
         this.prevY = this.y
     }
+    
 }
 
 class Puck {
@@ -62,6 +63,11 @@ class Puck {
     update() {
         this.x += this.dx
         this.y += this.dy
+        
+        const a = Math.abs(this.x - player.x)
+        const b = Math.abs(this.y - player.y)
+        const c = Math.sqrt(a**2 + b** 2)
+        
         if (this.x + w*.04 > w || this.x - w*.04 < 0) {
             this.dx *= -1
         }
@@ -69,6 +75,14 @@ class Puck {
         if (this.y + w*.04 > h || this.y - w*.04 < 0) {
             this.dy *= -1
         }
+        
+        if (c < w*.04 + w*.05) {
+            player.dx === 0 ? this.dx *= -1 : this.dx += player.dx *.5
+            player.dy === 0 ? this.dy *= -1 : this.dy += player.dy *.5
+        }
+        
+        Math.sign(this.dx) === 1 ? this.dx -= .1 : this.dx += .1
+        Math.sign(this.dy) === 1 ? this.dy -= .1 : this.dy += .1
     }
 }
 
