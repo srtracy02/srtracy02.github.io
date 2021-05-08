@@ -5,6 +5,20 @@ document.body.appendChild(canvas)
 const ctx = canvas.getContext('2d')
 var darkMode = false;
 
+var firebaseConfig = {
+  apiKey: keys.apiKey,
+  authDomain:  keys.authDomain,
+  projectId:  keys.projectId,
+  storageBucket:  keys.storageBucket,
+  messagingSenderId: keys.messagingSenderId,
+  appId:  keys.appId,
+  measurementId:  keys.measurementId
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+
 const board = () => {
     if (darkMode === false) {
         ctx.fillStyle = "#ffeadb";
