@@ -14,8 +14,9 @@ const board = () => {
     ctx.moveTo(w/3, 0)
     ctx.rect(w/3, h-h/20 , w/3, h)
     ctx.font = '48px Tahoma';
-    ctx.fillStyle = "black"
+    ctx.fillStyle = "#4b81ab"
     ctx.fillText(computer.score, w/15, h/15)
+    ctx.fillStyle = "#b28dff"
     ctx.fillText(player.score, w/15, h - h/16)
     ctx.stroke()
 }
@@ -154,7 +155,7 @@ class Computer {
     draw() {
         ctx.beginPath()
         ctx.arc(this.x, this.y , w*.05 ,0 ,2*Math.PI)
-        ctx.fillStyle = "blue"
+        ctx.fillStyle = "#4b81ab"
         ctx.fill()
         ctx.stroke()
     }
