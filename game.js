@@ -4,6 +4,30 @@ const h = canvas.height = 700
 document.body.appendChild(canvas)
 const ctx = canvas.getContext('2d')
 var darkMode = false;
+var provider = new firebase.auth.GoogleAuthProvider();
+firebase.auth().languageCode = "it";
+firebase.auth().signInWithPopup(provider).then((result) => {
+    var credential = result.credential;
+    var token = credential.accessToken;
+    var user = result.user
+    }).catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;;
+});
+firebase.auth().getRedirectResult().then((result) => {
+    if (result.credential) {
+        var credential = result.credential;
+        var token = credential.accessToken;
+    }
+    var user = result.user;
+}).catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    var email = error.email;
+    var credential = error.credential;
+});
 
 const board = () => {
     if (darkMode === false) {
