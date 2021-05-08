@@ -12,6 +12,19 @@ const board = () => {
     ctx.stroke()
 }
 
+
+
+
+
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowUp') {
+        player.y -= 4
+    } else if {event.key === 'ArrowDown') {
+        player.y += 4
+    }
+})
+    
 class Player {
     constructor(y) {
         this.y = y
@@ -27,6 +40,11 @@ class Player {
 const player = new Player(h/2)
 
 function animate() {
+    
+    ctx.clearRect(0,0,w,h)
+    
+    player.draw()
+    
     board()
     requestAnimationFrame(animate)
 }
