@@ -9,7 +9,7 @@ function renderCanvas() {
   context.fillRect(0,0,canvas.width,canvas.height);
 }
 
-render();
+renderCanvas();
 
 function startScreen() {
   $("#canvas".append(
