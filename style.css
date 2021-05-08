@@ -17,12 +17,12 @@ canvas {
 }
 
 body {
-    font-family: 'Courier', monospace;
+    font-family: 'Tahoma', monospace;
 }
 
 a {
     font-size: 24px;
-    font-family: 'Courier', monospace;
+    font-family: 'Tahoma', monospace;
     text-color: "black";
 }
 
