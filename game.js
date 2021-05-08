@@ -38,6 +38,16 @@ window.addEventListener('mousemove', (e) => {
     player.y = e.y - h*.05
 })
 
+async function generateInsult() {
+    const response = await fetch("https://evilinsult.com/generate_insult.php?lang=en&type=json, {
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    const generatedInsult = await response.json()
+    alert(generatedInsult.insult)
+}
+
 document.addEventListener('keydown', function (e) {
     if (e.key === '1') { //light mode
         document.body.style = "color: #ff9aa2; background-color: #ffdac1";
@@ -110,6 +120,7 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 computer.score++
+                generateInsult()
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
