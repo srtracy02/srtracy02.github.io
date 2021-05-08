@@ -6,11 +6,11 @@
 body {
     display: flex;
     justify-content: center;
-    background-color: (200, 50%, 70%);
+    background-color: ##8BE7FF;
 }
 
 canvas {
-    background-color: (200, 50%, 70%);
+    background-color: ##8BE7FF;
     margin-top: 32px;
     border-style: solid;
 }
