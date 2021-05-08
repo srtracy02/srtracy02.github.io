@@ -27,17 +27,9 @@ window.addEventListener('mousemove', (e) => {
 
 document.addEventListener('keydown', function (e) {
     if (e.key === '1') { //light mode
-        document.body.style = "color: black; background-color: #ffffff";
-        ctx.fillStyle = "#ffffff";
-        ctx.fillRect(0, 0, w, h);
+        document.body.style = "color: "#ff9aa2"; background-color: "#ffdac1";
     }if (e.key === '2') { //dark mode
-        document.body.style = "color: white; background-color: #111111";
-        ctx.fillStyle = "#111111";
-        ctx.fillRect(0, 0, w, h);
-    } if (e.key === '3') { //pastel mode
-        document.body.style = "color: #ff968a; background-color: #ffffb5";
-        ctx.fillStyle = "#c4faf8";
-        ctx.fillRect(0, 0, w, h);
+        document.body.style = "color: #e0bbe4; background-color: #564863";
     }
 })
         
@@ -56,7 +48,7 @@ class Player {
     draw() {
         ctx.beginPath()
         ctx.arc(this.x, this.y , w*.05 ,0 ,2*Math.PI)
-        ctx.fillStyle = "red"
+        ctx.fillStyle = "#b28dff"
         ctx.fill()
         ctx.stroke()
     }
