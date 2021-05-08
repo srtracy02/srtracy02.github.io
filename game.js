@@ -5,7 +5,7 @@ document.body.appendChild(canvas)
 const ctx = canvas.getContext('2d')
 
 const board = () => {
-    ctx.fillStyle = "#C7A9A2";
+    ctx.fillStyle = "rgba(247, 196, 255, 0.5)";
     ctx.fillRect(0, 0, w, h);
     ctx.fillStyle = "#E3C2B1";
     ctx.beginPath()
