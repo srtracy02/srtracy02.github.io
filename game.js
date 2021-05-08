@@ -3,9 +3,14 @@ const w = canvas.width = 500
 const h = canvas.height = 700
 document.body.appendChild(canvas)
 const ctx = canvas.getContext('2d')
+var darkMode = false;
 
 const board = () => {
-    ctx.fillStyle = "rgba(247, 196, 255, 0.5)";
+    if (darkMode === false) {
+        ctx.fillStyle = "#ffeadb";
+    } else if (darkMode === true) {
+        ctx.fillStyle = "#5c5661";
+    }
     ctx.fillRect(0, 0, w, h);
     ctx.fillStyle = "#E3C2B1";
     ctx.beginPath()
@@ -32,8 +37,10 @@ window.addEventListener('mousemove', (e) => {
 document.addEventListener('keydown', function (e) {
     if (e.key === '1') { //light mode
         document.body.style = "color: #ff9aa2; background-color: #ffdac1";
+        darkMode = false;
     }if (e.key === '2') { //dark mode
         document.body.style = "color: #e0bbe4; background-color: #564863";
+        darkMode = true;
     }
 })
         
