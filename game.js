@@ -26,7 +26,9 @@ window.addEventListener('mousemove', (e) => {
 })
 
 document.addEventListener('keydown', function (e) {
-    if (e.key === '2') {
+    if (e.key === '1') {
+        document.body.style = "color: black; background-color: #ffffff";
+    }if (e.key === '2') {
         document.body.style = "color: white; background-color: #111111";
     }
 })
