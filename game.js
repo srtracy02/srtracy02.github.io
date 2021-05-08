@@ -24,6 +24,12 @@ window.addEventListener('mousemove', (e) => {
     player.x = e.x - window.innerWidth/2 + w/2
     player.y = e.y - h*.05
 })
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === '2') {
+        document.body.classList.toggle("dark-mode");
+    }
+}
         
 
 class Player {
