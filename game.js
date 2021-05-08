@@ -6,6 +6,8 @@ const ctx = canvas.getContext('2d')
 
 const board = () => {
     ctx.fillStyle = "#C7A9A2";
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = "#E3C2B1";
     ctx.beginPath()
     ctx.arc(w/2,h/2,w/10,0,2*Math.PI)
     ctx.moveTo(0,h/2)
