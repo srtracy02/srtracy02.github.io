@@ -39,13 +39,13 @@ window.addEventListener('mousemove', (e) => {
 })
 
 async function generateInsult() {
-    const response = await fetch("https://evilinsult.com/generate_insult.php?lang=en&type=json, {
+    const response = await fetch("https://evilinsult.com/", {
         headers: {
             'Accept': 'application/json'
         }
     })
     const generatedInsult = await response.json()
-    alert(generatedInsult.insult)
+    alert(generatedInsult)
 }
 
 document.addEventListener('keydown', function (e) {
