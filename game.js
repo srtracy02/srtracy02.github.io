@@ -33,7 +33,7 @@ const board = () => {
     ctx.stroke()
 }
 
-const renderComplimentButton = function() {
+/*const renderComplimentButton = function() {
     return `<div style="text-align:center;">
         <button class="button compliment-button">GIVE ME AFFIRMATION</button>
     </div>
@@ -63,6 +63,7 @@ const loadComplimentIntoDOM = async function() {
 $(function() {
     loadComplimentIntoDOM();
 });
+*/
 
 window.addEventListener('mousemove', (e) => {
     player.x = e.x - window.innerWidth/2 + w/2
