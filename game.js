@@ -33,12 +33,13 @@ const board = () => {
     ctx.stroke()
 }
 
-/*export const renderComplimentButton = function() {
+export const renderComplimentButton = function() {
     return `<div style="text-align:center;">
         <button class="button compliment-button">GIVE ME AFFIRMATION</button>
     </div>
     `
 }
+/*
 
 export const handleComplimentButtonPress = async function(event) {
     const $root = $('#root');
@@ -143,7 +144,6 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 computer.score++
-                getCompliment()
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
@@ -154,7 +154,6 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 player.score++
-                getInsult()
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
