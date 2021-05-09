@@ -1,29 +1,19 @@
-export const renderMotivationButton = function() {
+export const renderComplimentButton = function() {
     return `<div style="text-align:center;">
-        <button class="button motivation-button" style="position: relative; top: 500px;" >Motivate Me</button>
+        <button class="button compliment-button" style="position: relative; top: 500px;" >Motivate Me</button>
     </div>
     `
 }
 
-export const handleMotivationButtonPress = async function(event) {
+export const handleComplimentButtonPress = async function(event) {
     const $root = $('#root');
     const comp = await axios({
         method: 'get',
         url: 'https://complimentr.com/api',
     });
-    const ins = await axios({
-        method: 'get',
-        url: 'https://insult.mattbas.org/api/insult',
-    });
-    if (computer.score >= player.score) {
-        $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
-            <h3>${comp.data.compliment}</h3>
-    }
-    else {
-        $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
-            <h3>${ins.data.insult}</h3>
+    $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
+        <h3>${comp.data.compliment}</h3>
     </div>`)
-    }
 }
 
 export  const loadComplimentIntoDOM = async function() {
