@@ -39,12 +39,7 @@ window.addEventListener('mousemove', (e) => {
 })
 
 export default async function getCompliment() {
-    const comp = await axios({
-        method: 'get',
-        url: 'https://complimentr.com/api',
-    });
-    alert(comp.data.compliment)
-    </div>`)
+    alert("Good job!")
 }
 
 document.addEventListener('keydown', function (e) {
@@ -129,7 +124,7 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 player.score++
-                getCompliment()
+                this.getCompliment()
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
