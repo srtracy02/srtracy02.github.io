@@ -110,6 +110,7 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 computer.score++
+                getCompliment()
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
@@ -120,7 +121,7 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 player.score++
-                alert("Good job!")
+                getInsult()
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
@@ -221,6 +222,14 @@ class Computer {
 const player = new Player
 const puck = new Puck
 const computer = new Computer
+
+function getCompliment() {
+    alert("Good job!")
+}
+        
+function getInsult() {
+    alert("You suck!")
+}
 
 function animate() {
     ctx.clearRect(0,0,w,h)
