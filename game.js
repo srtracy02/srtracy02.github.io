@@ -228,7 +228,7 @@ function getCompliment() {
         method: 'get',
         url: 'https://complimentr.com/api',
     });
-    alert(comp)
+    alert(comp.data.compliment)
 }
         
 function getInsult() {
