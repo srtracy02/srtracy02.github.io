@@ -15,9 +15,15 @@ export const handleMotivationButtonPress = async function(event) {
         method: 'get',
         url: 'https://insult.mattbas.org/api/insult',
     });
-    $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
-        <h3>${comp.data.compliment}</h3>
+    if (computer.score >= player.score) {
+        $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
+            <h3>${comp.data.compliment}</h3>
+    }
+    else {
+        $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
+            <h3>${ins.data.insult}</h3>
     </div>`)
+    }
 }
 
 export  const loadComplimentIntoDOM = async function() {
