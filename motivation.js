@@ -13,7 +13,7 @@ export const handleComplimentButtonPress = async function(event) {
         url: 'https://insult.mattbas.org/api/insult',
     });
     $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
-        <h3>${comp.data.compliment}</h3>
+        <h3>${comp.data.insult}</h3>
     </div>`)
 }
 
