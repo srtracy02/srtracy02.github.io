@@ -1,6 +1,6 @@
 export const renderComplimentButton = function() {
     return `<div style="text-align:center;">
-        <button class="button compliment-button">Motivate Me</button>
+        <button class="button compliment-button" style="position: relative; top: 400px;" >Motivate Me</button>
     </div>
     `
 }
@@ -11,7 +11,7 @@ export const handleComplimentButtonPress = async function(event) {
         method: 'get',
         url: 'https://complimentr.com/api',
     });
-    $(root).append(`<div style="text-align: center; font-size: 80px;">
+    $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 500px;">
         <h1>${comp.data.compliment}</h1>
     </div>`)
 }
@@ -19,7 +19,7 @@ export const handleComplimentButtonPress = async function(event) {
 export  const loadComplimentIntoDOM = async function() {
     // Grab a jQuery reference to the root HTML element
     const $root = $('#root');
-    $root.append(`<div style="text-align: center; font-size: 100px;">
+    $root.append(`<div style="text-align: center; font-size: 36px; position: relative; top: 450px;">
         <a href="./index.html">Clear Motivation</a>
     </div>`)
     $root.append(renderComplimentButton());
