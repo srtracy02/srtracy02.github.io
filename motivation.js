@@ -10,10 +10,10 @@ export const handleComplimentButtonPress = async function(event) {
     const comp = await axios({
         method: 'get',
         /*url: 'https://complimentr.com/api',*/
-        url: '/api/insult',
+        url: 'https://evilinsult.com/generate_insult.php?lang=en&type=json',
     });
     $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
-        <h3>${comp}</h3>
+        <h3>${comp.data.insult}</h3>
     </div>`)
 }
 
