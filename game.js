@@ -227,12 +227,12 @@ function getCompliment() {
     const comp = await axios({
         method: 'get',
         url: 'https://complimentr.com/api',
-    })
+    });
     alert(comp)
 }
         
 function getInsult() {
-    alert("You suck!")
+    alert("You suck!222")
 }
 
 function animate() {
