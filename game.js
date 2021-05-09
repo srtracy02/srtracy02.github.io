@@ -38,14 +38,17 @@ window.addEventListener('mousemove', (e) => {
     player.y = e.y - h*.05
 })
 
-async function generateInsult() {
-    const response = await fetch("https://insult.mattbas.org/api/insult", {
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    const generatedInsult = await response.json()
-    alert(generatedInsult)
+export default async function getInsult() {
+    let response;
+    try {
+        response = await axios({
+            method: 'get',
+            url: 'https://insult.mattbas.org/api/insult',
+        });
+    } catch (error) {
+        console.log(error);
+    }
+    return response;
 }
 
 document.addEventListener('keydown', function (e) {
@@ -120,7 +123,7 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 computer.score++
-                generateInsult()
+                alert(getInsult())
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
