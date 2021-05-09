@@ -33,6 +33,34 @@ const board = () => {
     ctx.stroke()
 }
 
+export const renderMotivationButton = function {
+    return `<div style="text-align:center;">
+                <button class="button motivation-button">Motivate Me!</button>
+            </div>
+            `
+}
+
+export const handleMotivationButtonPress = async function(event) {
+    const $root = $('#root');
+    const comp = await axios({
+        method: 'get',
+        url: 'https://complimentr.com/api',
+    });
+    $(root).append(`div style="text-align: center; font-size: 80px;">
+        <h1>${comp.data.compliment}</h1>
+        </div>`)
+}
+
+export  const loadComplimentIntoDOM = async function() {
+    const $root = $('#root');
+    $root.append(renderMotivationButton());
+    $root.on("click", ".motivation-button", handleMotivationButtonPress);
+}
+
+$(function() {
+    loadComplimentIntoDOM();
+});
+
 window.addEventListener('mousemove', (e) => {
     player.x = e.x - window.innerWidth/2 + w/2
     player.y = e.y - h*.05
@@ -222,18 +250,6 @@ class Computer {
 const player = new Player
 const puck = new Puck
 const computer = new Computer
-
-function getCompliment() {
-    const comp = await axios({
-        method: 'get',
-        url: 'https://complimentr.com/api',
-    });
-    alert("UGH")
-}
-        
-function getInsult() {
-    alert("You suck!222")
-}
 
 function animate() {
     ctx.clearRect(0,0,w,h)
