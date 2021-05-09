@@ -1,6 +1,6 @@
 export const renderComplimentButton = function() {
     return `<div style="text-align:center;">
-        <button class="button compliment-button">GIVE ME AFFIRMATION</button>
+        <button class="button compliment-button">Motivate Me</button>
     </div>
     `
 }
@@ -20,7 +20,7 @@ export  const loadComplimentIntoDOM = async function() {
     // Grab a jQuery reference to the root HTML element
     const $root = $('#root');
     $root.append(`<div style="text-align: center; font-size: 100px;">
-        <a href="./index.html">Back to Main</a>
+        <a href="./index.html">Clear Motivation</a>
     </div>`)
     $root.append(renderComplimentButton());
     $root.on("click", ".compliment-button", handleComplimentButtonPress);
