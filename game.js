@@ -224,7 +224,8 @@ const puck = new Puck
 const computer = new Computer
 
 function getCompliment() {
-    alert("Good job!")
+    const comp = "Good job!")
+    alert(comp)
 }
         
 function getInsult() {
