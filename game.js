@@ -33,7 +33,7 @@ const board = () => {
     ctx.stroke()
 }
 
-export const renderComplimentButton = function() {
+const renderComplimentButton = function() {
     return `<div style="text-align:center;">
         <button class="button compliment-button">GIVE ME AFFIRMATION</button>
     </div>
