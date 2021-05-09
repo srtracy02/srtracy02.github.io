@@ -45,7 +45,7 @@ async function generateInsult() {
         }
     })
     const generatedInsult = await response.json()
-    alert(generatedInsult.insult)
+    alert(generatedInsult)
 }
 
 document.addEventListener('keydown', function (e) {
