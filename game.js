@@ -123,7 +123,6 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 computer.score++
-                alert(getInsult())
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
