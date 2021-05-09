@@ -224,12 +224,15 @@ const puck = new Puck
 const computer = new Computer
 
 function getCompliment() {
-    const comp = "Good job!"
+    const comp = await axios({
+        method: 'get',
+        url: 'https://complimentr.com/api',
+    })
     alert(comp)
 }
         
 function getInsult() {
-    alert("You suck!111")
+    alert("You suck!")
 }
 
 function animate() {
