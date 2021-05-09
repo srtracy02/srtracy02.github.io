@@ -38,17 +38,13 @@ window.addEventListener('mousemove', (e) => {
     player.y = e.y - h*.05
 })
 
-export default async function getInsult() {
-    let response;
-    try {
-        response = await axios({
-            method: 'get',
-            url: 'https://insult.mattbas.org/api/insult',
-        });
-    } catch (error) {
-        console.log(error);
-    }
-    return response;
+export default async function getCompliment() {
+    const comp = await axios({
+        method: 'get',
+        url: 'https://complimentr.com/api',
+    });
+    alert(comp.data.compliment)
+    </div>`)
 }
 
 document.addEventListener('keydown', function (e) {
@@ -133,6 +129,7 @@ class Puck {
 
             if(this.x > w/3 && this.x < 2*w/3) {
                 player.score++
+                getCompliment()
                 puck.x = w/2
                 puck.y = h/2
                 puck.dx = 0
