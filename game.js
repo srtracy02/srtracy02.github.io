@@ -229,7 +229,7 @@ function getCompliment() {
 }
         
 function getInsult() {
-    alert("You suck!")
+    alert("You suck!111")
 }
 
 function animate() {
