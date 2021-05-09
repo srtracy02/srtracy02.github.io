@@ -33,7 +33,7 @@ const board = () => {
     ctx.stroke()
 }
 
-export const renderComplimentButton = function() {
+/*export const renderComplimentButton = function() {
     return `<div style="text-align:center;">
         <button class="button compliment-button">GIVE ME AFFIRMATION</button>
     </div>
@@ -61,12 +61,10 @@ export  const loadComplimentIntoDOM = async function() {
     $root.on("click", ".compliment-button", handleComplimentButtonPress);
 }
 
-/**
- * Use jQuery to execute the loadTweetsIntoDOM function after the page loads
- */
- $(function() {
+$(function() {
     loadComplimentIntoDOM();
 });
+*/
 
 window.addEventListener('mousemove', (e) => {
     player.x = e.x - window.innerWidth/2 + w/2
