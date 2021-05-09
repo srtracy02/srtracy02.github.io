@@ -39,9 +39,8 @@ const renderComplimentButton = function() {
     </div>
     `
 }
-/*
 
-export const handleComplimentButtonPress = async function(event) {
+const handleComplimentButtonPress = async function(event) {
     const $root = $('#root');
     const comp = await axios({
         method: 'get',
@@ -52,8 +51,7 @@ export const handleComplimentButtonPress = async function(event) {
     </div>`)
 }
 
-export  const loadComplimentIntoDOM = async function() {
-    // Grab a jQuery reference to the root HTML element
+const loadComplimentIntoDOM = async function() {
     const $root = $('#root');
     $root.append(`<div style="text-align: center; font-size: 100px;">
         <a href="./index.html">Back to Main</a>
@@ -65,7 +63,6 @@ export  const loadComplimentIntoDOM = async function() {
 $(function() {
     loadComplimentIntoDOM();
 });
-*/
 
 window.addEventListener('mousemove', (e) => {
     player.x = e.x - window.innerWidth/2 + w/2
