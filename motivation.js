@@ -10,7 +10,7 @@ export const handleComplimentButtonPress = async function(event) {
     const comp = await axios({
         method: 'get',
         /*url: 'https://complimentr.com/api',*/
-        url: 'https://insult.mattbas.org/api/insult',
+        url: '/api/insult',
     });
     $(root).append(`<div style="text-align: center; font-size: 36px; position: relative; top: 600px;">
         <h3>${comp}</h3>
